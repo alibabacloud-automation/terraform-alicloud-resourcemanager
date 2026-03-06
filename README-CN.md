@@ -1,4 +1,4 @@
-Terraform 阿里云资源管理模块
+阿里云资源管理 Terraform 模块
 
 # terraform-alicloud-resourcemanager
 
@@ -16,10 +16,6 @@ module "resourcemanager" {
 
   # 资源目录
   create_resource_directory = true
-  resource_directory_config = {
-    status                 = "Enabled"
-    member_deletion_status = "Enabled"
-  }
 
   # 文件夹
   create_folder = true
@@ -38,7 +34,6 @@ module "resourcemanager" {
   create_policy = true
   policy_config = {
     policy_name = "production-policy"
-    description = "Policy for production resources"
   }
 }
 ```
@@ -59,7 +54,7 @@ module "resourcemanager" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | 1.272.1 |
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | >= 1.212.0 |
 
 ## Modules
 
